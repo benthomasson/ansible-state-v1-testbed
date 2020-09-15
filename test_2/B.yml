@@ -1,0 +1,9 @@
+routers:
+  - name: R1
+    interfaces:
+      - name: eth0
+        ip_address: 1.1.1.1
+  - name: R2
+    interfaces:
+      - name: eth0
+        ip_address: 1.1.1.2
