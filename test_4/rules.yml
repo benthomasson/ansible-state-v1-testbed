@@ -1,6 +1,9 @@
 rules:
   - rule_selector: root['routers'][\d+]
     inventory_selector: "node['name']"
+    vars:
+      router_name: "node['name']"
+      mgmt_interface: "node['interfaces'][0]['name']"
     create:
       tasks: create_router.yml
     update:

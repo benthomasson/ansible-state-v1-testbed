@@ -1,0 +1,1 @@
+ansible-state diff A.yml B.yml rules.yml  --inventory inventory.yml
