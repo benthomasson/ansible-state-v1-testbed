@@ -1,2 +1,12 @@
 - debug:
     msg: update_router
+- debug:
+    var: state
+- debug:
+    var: diff
+- debug:
+    msg: "{{diff}}"
+- debug:
+    var: router_name
+- debug:
+    var: mgmt_interface
