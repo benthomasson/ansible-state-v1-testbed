@@ -1,0 +1,10 @@
+- debug:
+    msg: "ifconfig {{item.name}} {{item.address}} netmask {{item.mask}} up"
+  with_items: "{{node.interfaces}}"
+- shell:
+    cmd: "ifconfig {{item.name}} {{item.address}} netmask {{item.mask}} up"
+  with_items: "{{node.interfaces}}"
+- shell:
+    cmd: "route add default gw {{node.gateway}} {{node.gateway_if}}"
+- hostname:
+    name: "{{inventory_hostname}}"
