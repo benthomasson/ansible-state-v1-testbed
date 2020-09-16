@@ -2,6 +2,7 @@ all:
   hosts:
     localhost:
       ansible_connection: local
+      ansible_python_interpreter: /usr/bin/python3
     host1:
       ansible_user: root
       ansible_host: 192.168.122.243
