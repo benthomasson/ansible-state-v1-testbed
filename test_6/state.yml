@@ -2,3 +2,4 @@ routers:
   - name: R1
     interfaces:
       - name: eth0
+        ip_address: 1.1.1.1
