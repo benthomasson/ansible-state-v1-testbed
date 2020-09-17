@@ -1,7 +1,6 @@
 rules:
   - rule_selector: root['vm_host']
     inventory_selector: "node['name']"
-    become: yes
     create:
       tasks: create_vm_host.yml
     update:
@@ -10,7 +9,6 @@ rules:
       tasks: delete_vm_host.yml
   - rule_selector: root['routers'][\d+]
     inventory_selector: "node['name']"
-    become: yes
     create:
       tasks: create_router.yml
     update:
@@ -19,7 +17,6 @@ rules:
       tasks: delete_router.yml
   - rule_selector: root['hosts'][\d+]
     inventory_selector: "node['name']"
-    become: yes
     create:
       tasks: create_router.yml
     update:

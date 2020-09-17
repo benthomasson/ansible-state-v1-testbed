@@ -1,6 +1,6 @@
 routers:
   - name: vyos1
-    router_id: 10.1.1.1/32
+    router_id: 10.1.1.1
     ospf_network: 192.168.0.0/16
     interfaces:
       - name: eth1
@@ -10,7 +10,7 @@ routers:
         address: 192.168.98.2
         mask: 24
   - name: vyos2
-    router_id: 10.1.1.2/32
+    router_id: 10.1.1.2
     ospf_network: 192.168.0.0/16
     interfaces:
       - name: eth1
