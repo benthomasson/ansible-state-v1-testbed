@@ -1,0 +1,9 @@
+rules:
+  - rule_selector: root['routers'][\d+]
+    inventory_selector: "node['name']"
+    create:
+      tasks: create_router.yml
+    update:
+      tasks: update_router.yml
+    delete:
+      tasks: delete_router.yml

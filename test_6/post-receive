@@ -1,0 +1,15 @@
+#!/bin/bash
+while read oldrev newrev ref
+do
+    echo "oldrev $oldrev newrev $newrev ref $ref"
+    mkdir -p /tmp/old
+    mkdir -p /tmp/new
+    echo "GIT_WORK_TREE=/tmp/old git checkout $oldrev -- test_6/state.yml"
+    echo "GIT_WORK_TREE=/tmp/new git checkout $newrev -- test_6/state.yml"
+    GIT_WORK_TREE=/tmp/old git checkout $oldrev -- test_6/state.yml
+    GIT_WORK_TREE=/tmp/new git checkout $newrev -- test_6/state.yml
+
+    cd /home/ben/git/ansible-state
+    pipenv run ansible-state diff /tmp/old/test_6/state.yml /tmp/new/test_6/state.yml rules.yml --cwd /home/ben/git/ansible-state-v1-testbed/test_6 --explain
+
+done
