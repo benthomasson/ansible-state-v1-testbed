@@ -18,9 +18,9 @@ rules:
   - rule_selector: root['hosts'][\d+]
     inventory_selector: "node['name']"
     create:
-      tasks: create_router.yml
+      tasks: create_host.yml
     update:
-      tasks: update_router.yml
+      tasks: update_host.yml
     delete:
-      tasks: delete_router.yml
+      tasks: delete_host.yml
 
