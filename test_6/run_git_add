@@ -1,0 +1,6 @@
+#!/bin/bash -ex
+cp B.yml state.yml
+git add state.yml
+git commit -m "run_git_add"
+git push bare devel
+
