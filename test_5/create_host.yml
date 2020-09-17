@@ -5,6 +5,9 @@
     cmd: "ifconfig {{item.name}} {{item.address}} netmask {{item.mask}} up"
   with_items: "{{node.interfaces}}"
 - shell:
+    cmd: "route del default gw {{node.gateway}} {{node.gateway_if}}"
+  ignore_errors: yes
+- shell:
     cmd: "route add default gw {{node.gateway}} {{node.gateway_if}}"
 - hostname:
     name: "{{inventory_hostname}}"
