@@ -1,0 +1,12 @@
+# The {{node}} variable contains the desired state
+# Modify that state and send it back to ansible-state for comparison
+# Using cli parsing might be the right approach here: https://docs.ansible.com/ansible/latest/network/user_guide/cli_parsing.html
+# Facts may also be useful in discovering the state
+# More experiments need to be done here
+- debug:
+    msg: "Discover router"
+# Write out the discovered state to a local file for ansible-state to read
+- local_action:
+    module: copy
+    content: "{{node | to_nice_yaml}}"
+    dest: "discovered_state_{{discovery_id}}.yml"
