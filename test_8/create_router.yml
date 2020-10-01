@@ -1,0 +1,13 @@
+- debug:
+    msg: "set interfaces ethernet {{item.name}} address {{item.address}}/{{item.mask}}"
+  with_items: "{{node.interfaces}}"
+- vyos_config:
+    lines:
+      - "set interfaces ethernet {{item.name}} address {{item.address}}/{{item.mask}}"
+  with_items: "{{node.interfaces}}"
+- vyos_config:
+    lines:
+      - "set protocols ospf parameters router-id {{node.router_id}}"
+      - "set protocols ospf area 0 network {{node.ospf_network}}"
+
+
