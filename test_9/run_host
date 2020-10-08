@@ -1,0 +1,1 @@
+ansible-state diff empty_state.yml host_state.yml rules.yml --inventory inventory.yml

@@ -1,0 +1,21 @@
+routers:
+  - name: vyos1
+    router_id: 10.1.1.1
+    ospf_network: 10.0.0.0/16
+    interfaces:
+      - name: eth1
+        ipv4:
+          - address: 10.0.100.2/24
+      - name: eth2
+        ipv4:
+          - address: 10.0.98.2/24
+  - name: vyos2
+    router_id: 10.1.1.2
+    ospf_network: 10.0.0.0/16
+    interfaces:
+      - name: eth1
+        ipv4:
+          - address: 10.0.100.1/24
+      - name: eth2
+        ipv4:
+          - address: 10.0.99.2/24

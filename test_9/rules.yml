@@ -1,0 +1,27 @@
+rules:
+  - rule_selector: root['routers'][\d+]
+    inventory_selector: "node['name']"
+    create:
+      tasks: create_router.yml
+    update:
+      tasks: update_router.yml
+    delete:
+      tasks: delete_router.yml
+    retrieve:
+      tasks: discover_router.yml
+    validate:
+      tasks: validate_router.yml
+  - rule_selector: root['hosts'][\d+]
+    inventory_selector: "node['name']"
+    create:
+      tasks: create_host.yml
+    update:
+      tasks: update_host.yml
+    delete:
+      tasks: delete_host.yml
+    retrieve:
+      tasks: discover_host.yml
+    validate:
+      tasks: validate_host.yml
+
+
