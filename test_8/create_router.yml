@@ -1,5 +1,9 @@
 - vyos.vyos.vyos_l3_interfaces:
     config: "{{node.interfaces}}"
+  register: result
+- copy:
+    content: "{{result.after | default(result.before) | to_nice_yaml}}"
+    dest: "discovered_state_{discovery_id}.yml"
 - vyos_config:
     lines:
       - "set protocols ospf parameters router-id {{node.router_id}}"

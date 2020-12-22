@@ -1,6 +1,6 @@
 rules:
-  - rule_selector: root['routers'][\d+]
-    inventory_selector: "node['name']"
+  - rule_selector: root.routers.index
+    inventory_selector: node.name
     create:
       tasks: create_router.yml
     update:
@@ -11,8 +11,8 @@ rules:
       tasks: discover_router.yml
     validate:
       tasks: validate_router.yml
-  - rule_selector: root['hosts'][\d+]
-    inventory_selector: "node['name']"
+  - rule_selector: root.hosts.index
+    inventory_selector: node.name
     create:
       tasks: create_host.yml
     update:
