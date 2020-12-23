@@ -1,0 +1,8 @@
+---
+type: object
+properties:
+  routers:
+    type: array
+  hosts:
+    type: array
+...

@@ -1,0 +1,18 @@
+---
+type: object
+properties:
+  routers:
+    type: array
+    items:
+      $ref: '#/definitions/router'
+  hosts:
+    type: array
+    items:
+      $ref: '#/definitions/host'
+definitions:
+  host:
+    type: object
+  router:
+    type: object
+
+...
