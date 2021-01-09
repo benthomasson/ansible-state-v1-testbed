@@ -1,3 +1,4 @@
+schema: schema2.yml
 routers:
   - name: vyos1
     router_id: 10.1.1.1

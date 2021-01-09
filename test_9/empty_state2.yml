@@ -1,0 +1,3 @@
+schema: schema2.yml
+rules: rules.yml
+inventory: inventory.yml

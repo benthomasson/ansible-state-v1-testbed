@@ -1,0 +1,25 @@
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+      ansible_python_interpreter: /usr/bin/python3
+    host1:
+      ansible_user: root
+      ansible_host: 192.168.122.243
+      ansible_python_interpreter: /usr/bin/python3
+    host2:
+      ansible_user: root
+      ansible_host: 192.168.122.155
+      ansible_python_interpreter: /usr/bin/python3
+    vyos1:
+      ansible_user: vyos
+      ansible_host: 192.168.122.144
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_connection: network_cli
+      ansible_network_os: vyos
+    vyos2:
+      ansible_user: vyos
+      ansible_host: 192.168.122.132
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_connection: network_cli
+      ansible_network_os: vyos

@@ -1,19 +1,6 @@
-schema: schema2.yml
-hosts:
-  - name: host1
-    gateway: 10.0.98.2
-    gateway_if: eth1
-    interfaces:
-      - name: eth1
-        address: 10.0.98.1
-        mask: 255.255.255.0
-  - name: host2
-    gateway: 10.0.99.2
-    gateway_if: eth1
-    interfaces:
-      - name: eth1
-        address: 10.0.99.1
-        mask: 255.255.255.0
+schema: benthomasson.desired_state.network_schema
+rules: benthomasson.desired_state.network_rules
+inventory: inventory.yml
 routers:
   - name: vyos1
     router_id: 10.1.1.1
