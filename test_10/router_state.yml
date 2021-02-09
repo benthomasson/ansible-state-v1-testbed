@@ -1,6 +1,7 @@
-schema: benthomasson.desired_state.network_schema
-rules: benthomasson.desired_state.network_rules
-inventory: inventory.yml
+meta:
+  schema: benthomasson.desired_state.network_schema
+  rules: benthomasson.desired_state.network_rules
+  inventory: inventory.yml
 routers:
   - name: vyos1
     router_id: 10.1.1.1

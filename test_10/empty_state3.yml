@@ -1,3 +1,4 @@
-schema: benthomasson.desired_state.network_schema
-rules: benthomasson.desired_state.network_rules
-inventory: inventory.yml
+meta:
+  schema: benthomasson.desired_state.network_schema
+  rules: benthomasson.desired_state.network_rules
+  inventory: inventory.yml
